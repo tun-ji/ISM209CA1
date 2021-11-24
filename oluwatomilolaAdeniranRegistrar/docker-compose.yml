@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  database:
+      container_name: airtel
+      image: postgres:latest
+      ports: 
+        - "5440:5432"    
+      env_file:
+        - db.env
+      volumes: 
+        - /var/lib/postgresql/data
